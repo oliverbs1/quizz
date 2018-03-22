@@ -1,0 +1,474 @@
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/fond1.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+#middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.blocTittle {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    width: 60%;
+    text-align: center;
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.blocTittle h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    color: white;
+}
+
+.rep {
+    font-family: 'Lobster', cursive;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.restart {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 66px;
+    left: 71%;
+    font-family: 'Lobster', cursive;
+}
+
+.sousTittre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 10px;
+    color: white;
+}
+
+.design {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 180px;
+    border-radius: 0px;
+    border-color: white;
+    background-color: transparent;
+}
+
+#show {
+    display: none;
+}
+
+
+/* --------------------   Main   -------------------*/
+
+header h1 {
+    padding-top: 20px;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.outer2 {}
+
+.borderQuizz {
+    width: 80%;
+    height: 525px;
+    border: 5px solid white;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -46%);
+}
+
+.timer {
+    color: white;
+}
+
+#showQuestion {
+    display: none;
+}
+
+#textAdd h2 {
+    color: white;
+    font-family: 'Montserrat';
+    margin-top: 40px;
+    text-align: center;
+}
+
+.typo {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: white;
+}
+
+#textAdd p {
+    margin-top: 40px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+
+/* -------- timer ------*/
+
+
+/*
+.container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.countdown {
+  display: block;
+  width: 66vmin;
+  height: 66vmin;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 25vmin;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: width, height, border-radius, font-size;
+  transition: width, height, border-radius, font-size;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.countdown--ended {
+  -webkit-animation: buzz 0.5s;
+  animation: buzz 0.5s;
+}
+.countdown:active {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+@-webkit-keyframes buzz {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+@keyframes buzz {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+.countdown--wide {
+  width: 100%;
+  height: 100%;
+  font-size: 80px;
+  border-radius: 0;
+  position: absolute;
+  top: 0px;
+}
+.countdown__fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #FF5722;
+  opacity: 1;
+}
+.countdown__digit {
+  width: 100%;
+  color: #FF5722;
+  position: relative;
+  text-align: right;
+  top: -40%;
+  right: 40px;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.countdown__buttons {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  height: 200px;
+  margin-top: -100px;
+  color: white;
+  z-index: 1;
+}
+.countdown__button {
+  height: 50%;
+}
+
+.full-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 1em 0.5em 0.5em 2em;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+*/
+
+#register_form {
+    width: 37%;
+    margin: 100px auto;
+    padding-bottom: 30px;
+    border: 1px solid #918274;
+    border-radius: 5px;
+    background: white;
+}
+
+#register_form input {
+    width: 80%;
+    height: 35px;
+    margin: 5px 10%;
+    font-size: 1.1em;
+    padding: 4px;
+    font-size: .9em;
+}
+
+.form_error span {
+    width: 80%;
+    height: 35px;
+    margin: 3px 10%;
+    font-size: 1.1em;
+    color: #D83D5A;
+}
+
+.form_error input {
+    border: 1px solid #D83D5A;
+}
+
+#reg_btn {
+    height: 35px;
+    width: 80%;
+    margin: 5px 10%;
+    color: white;
+    background: #3B5998;
+    border: none;
+    border-radius: 5px;
+}
+
+.question,
+.question2 {
+    position: relative;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 27px;
+}
+
+.merci {
+    position: relative;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 159px;
+    font-size: 27px;
+}
+
+.reponseQ {
+    left: 25%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.reponseBlock {
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.buttonResponse {
+    border: 1px solid white;
+    width: 300px;
+    display: block;
+    font-size: 20px;
+    color: white;
+}
+
+.buttonResponse:hover {
+    /*
+  background: -webkit-gradient(linear, left top, left bottom, from(#811089), to(#060F88));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+*/
+    background-color: white;
+}
+
+.active {
+    background-color: white;
+    /* border: 2px solid green;*/
+    color: black;
+}
+
+#time {
+    color: white;
+}
+
+
+/*   modal   */
+
+#colorButton,
+#click {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+#colorButton2 {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+#myModal {
+    width: 60%;
+    background-image: url(../img/fond1.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+#modalHeaderStyle {}
+
+#modalTitre {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+#marginP {
+    text-align: center;
+    margin-top: 10%;
+    position: relative;
+    font-weight: bold;
+}
+
+#marginA {
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+#marginR {
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+#score {
+    position: relative;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: -231px;
+    font-size: 40px;
+}
+
+.buttonEndQuizz {
+    position: relative;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 23px;
+}
+
+.open {
+    color: black;
+    width: 132px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-left: 40%;
+    padding: 8px;
+    font-size: 21px;
+}
+
+#click2 {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    position: relative;
+    left: 42%;
+    top: 30px;
+    font-weight: bold;
+}
+
+
+/*#hideButton2 {
+    background-image: url(../img/gif.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}*/
+
+#img {
+    position: absolute;
+    height: 515px;
+    top: 0;
+    width: 100%;
+}
